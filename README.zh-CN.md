@@ -24,11 +24,16 @@ WD Team 参加 2024 年中国科大余庆杯的作品。
 全部数据只存在浏览器里：没有账号、没有数据库、没有统计；运行时**不请求任何第三方资源**，
 所以断网的校园局域网也能正常使用。
 
-| 首页 | 书签 |
-| --- | --- |
-| <img src="assets/img/screenshot-home.webp" alt="首页" width="100%"> | <img src="assets/img/screenshot-bookmarks.webp" alt="书签页" width="100%"> |
+界面是刻意安静的：Instrument Serif + Inter 自托管字体、暖纸色与陶土橙、编辑感的排版，
+以及跟随系统偏好的明暗双主题。
 
-<img src="assets/img/screenshot-calendar.webp" alt="日历页" width="100%">
+| 首页 · 浅色 | 首页 · 深色 |
+| --- | --- |
+| <img src="assets/img/screenshot-home.webp" alt="首页（浅色）" width="100%"> | <img src="assets/img/screenshot-home-dark.webp" alt="首页（深色）" width="100%"> |
+
+| 书签 | 日历 |
+| --- | --- |
+| <img src="assets/img/screenshot-bookmarks.webp" alt="书签页" width="100%"> | <img src="assets/img/screenshot-calendar.webp" alt="日历页" width="100%"> |
 
 ## 功能
 
@@ -39,6 +44,8 @@ WD Team 参加 2024 年中国科大余庆杯的作品。
 - **纯静态、可自托管**：没有构建步骤，也没有必须运行的后端；放到 Nginx、GitHub Pages
   或任何静态文件服务器上即可。
 - **可选 API**：部署仓库里带一个极小的 Express 服务（`GET /api/health`），供 Orange Pi 部署使用。
+- **明暗双主题**：跟随 `prefers-color-scheme`，没有主题开关，也不会闪一下错误的颜色。
+- **自托管字体**：Instrument Serif 与 Inter 以 WOFF2 随仓库分发（含 OFL 许可），离线可用。
 
 ## 本地运行
 
@@ -60,7 +67,7 @@ node scripts/check.mjs
 ```text
 myhomepage/
 ├── index.html / bookmarks.html / calendar.html
-├── assets/{css,js,img,vendor}
+├── assets/{css,js,img,fonts,vendor}
 ├── docs/                  # 需求分析、概要设计、原始 PDF
 ├── scripts/check.mjs      # HTML / 链接 / JS 检查
 ├── .github/               # issue 模板、CI
@@ -90,6 +97,14 @@ myhomepage/
 ## 队伍
 
 **WD Team**（队名取自两位创始成员姓氏首字母），2024 年余庆杯第 25 队，获 **Honorable Mention**。
+
+## 致谢
+
+- [FullCalendar](https://fullcalendar.io/)（MIT，vendored 在 `assets/vendor/fullcalendar/`）
+- [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif) 与
+  [Inter](https://fonts.google.com/specimen/Inter)：SIL Open Font License 1.1，
+  WOFF2 与许可文件在 `assets/fonts/`
+- 2024 年余庆杯的组织者和评委
 
 ## 许可证
 

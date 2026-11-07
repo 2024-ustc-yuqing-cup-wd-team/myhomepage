@@ -67,16 +67,12 @@
     return url;
   }
 
-  function monogram(domain) {
+  function monogramTone(domain) {
     var hash = 0;
     for (var i = 0; i < domain.length; i += 1) {
-      hash = (hash * 31 + domain.charCodeAt(i)) % 360;
+      hash = (hash * 31 + domain.charCodeAt(i)) % 6;
     }
-    return {
-      letter: domain.charAt(0).toUpperCase(),
-      background: 'hsl(' + hash + ' 72% 92%)',
-      color: 'hsl(' + hash + ' 46% 30%)'
-    };
+    return hash;
   }
 
   function createItem(bookmark) {
@@ -91,12 +87,9 @@
 
     var icon = document.createElement('span');
     icon.className = 'bookmark-icon';
+    icon.dataset.tone = String(monogramTone(bookmark.domain));
     icon.setAttribute('aria-hidden', 'true');
-
-    var mark = monogram(bookmark.domain);
-    icon.textContent = mark.letter;
-    icon.style.background = mark.background;
-    icon.style.color = mark.color;
+    icon.textContent = bookmark.domain.charAt(0).toUpperCase();
 
     var label = document.createElement('span');
     label.className = 'bookmark-domain';

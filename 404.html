@@ -5,9 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · USTC MyHomePage</title>
   <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
   <link rel="icon" href="/myhomepage/assets/img/favicon.png" type="image/png">
   <style>
-    :root { color-scheme: light; }
+    @font-face {
+      font-family: "Instrument Serif";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("/myhomepage/assets/fonts/instrument-serif-regular.woff2") format("woff2");
+    }
+    :root {
+      --paper: #f6f1e8;
+      --ink: #17140f;
+      --muted: #837a6b;
+      --line: #e0d7c7;
+      --accent: #b4471e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #141210;
+        --ink: #f2ece2;
+        --muted: #9c9283;
+        --line: #2c2720;
+        --accent: #d9774a;
+      }
+    }
     * { box-sizing: border-box; }
     body {
       margin: 0;
@@ -15,46 +38,68 @@
       display: grid;
       place-items: center;
       padding: 2rem;
-      background: #f6f7f9;
-      color: #0f172a;
+      background: var(--paper);
+      color: var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
     .card {
-      max-width: 26rem;
       width: 100%;
+      max-width: 28rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
       text-align: center;
-      background: #fff;
-      border: 1px solid #e4e7ec;
-      border-radius: 1.25rem;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 12px 32px -12px rgba(15, 23, 42, .18);
+    }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
     }
     .code {
-      font-size: 3.5rem;
-      font-weight: 800;
-      letter-spacing: -0.04em;
       margin: 0;
-      color: #ea580c;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(4rem, 14vw, 6.5rem);
+      font-weight: 400;
+      line-height: 0.9;
+      color: var(--accent);
     }
-    h1 { font-size: 1.35rem; margin: .5rem 0 .75rem; }
-    p { margin: 0 0 1.5rem; color: #5b6778; line-height: 1.6; }
+    h1 {
+      margin: 1.2rem 0 0;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+    p {
+      margin: 0.7rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
     a {
       display: inline-block;
-      padding: .65rem 1.2rem;
-      border-radius: .65rem;
-      background: #ea580c;
-      color: #fff;
-      text-decoration: none;
+      margin-top: 1.8rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--accent);
+      color: var(--ink);
+      font-size: 0.7rem;
       font-weight: 600;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      text-transform: uppercase;
     }
+    a:hover { color: var(--accent); }
   </style>
 </head>
 <body>
   <div class="card">
+    <p class="eyebrow">USTC MyHomePage</p>
     <p class="code">404</p>
-    <h1>This page is not on the calendar</h1>
-    <p>The link may be outdated. Head back to the start page and pick up from there.</p>
-    <a href="/myhomepage/">Back to USTC MyHomePage</a>
+    <h1>This page is not on the calendar.</h1>
+    <p>The link may be outdated, or the page may have moved. Head back to the start and pick up from there.</p>
+    <a href="/myhomepage/">Back to the home page</a>
   </div>
 </body>
 </html>

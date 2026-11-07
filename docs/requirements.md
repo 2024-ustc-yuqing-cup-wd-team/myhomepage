@@ -111,4 +111,5 @@ The requirements above are unchanged. The implementation was cleaned up in 2026:
 - bookmarks are rendered with local colour-coded monograms instead of
   third-party favicon services, so the page works fully offline and makes no
   external requests;
-- the UI uses plain CSS instead of Bootstrap + jQuery + Semantic UI.
+- the UI uses plain CSS instead of Bootstrap + jQuery + Semantic UI, with a
+  self-hosted typeface pair and automatic light/dark themes.

@@ -4,60 +4,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bookmarks · USTC MyHomePage</title>
-  <meta name="description" content="Keep up to ten of your most-used campus links one click away. Stored in your browser.">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Ten campus sites, one click. Bookmarks are stored in this browser only.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bookmarks · USTC MyHomePage">
-  <meta property="og:description" content="Keep up to ten of your most-used campus links one click away.">
+  <meta property="og:description" content="Ten campus sites, one click. Stored in your browser.">
   <meta property="og:image" content="https://2024-ustc-yuqing-cup-wd-team.github.io/myhomepage/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/base.css">
   <link rel="stylesheet" href="assets/css/bookmarks.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <aside class="sidebar">
-    <a class="brand" href="index.html">
-      <img src="assets/img/logo-25.webp" alt="" width="96" height="96">
-      <span class="brand-text"><strong>WD Team</strong><small>Yuqing Cup 2024</small></span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="bookmarks.html" aria-current="page">Bookmarks</a>
-      <a href="calendar.html">Calendar</a>
-      <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-    </nav>
-    <p class="sidebar-note">USTC MyHomePage<br><span>2024 · Honorable Mention</span></p>
-  </aside>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="wordmark" href="index.html">
+        <img src="assets/img/logo-25.webp" alt="" width="32" height="32">
+        <span>
+          <strong>WD Team</strong>
+          <small>USTC MyHomePage</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="bookmarks.html" aria-current="page">Bookmarks</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="page" id="main">
-    <header class="page-header">
-      <p class="eyebrow">Tool 01</p>
+  <main id="main">
+    <header class="page-head wrap">
+      <p class="eyebrow">The collection</p>
       <h1>Bookmarks</h1>
-      <p class="page-lead">Keep your ten most-used links one click away. Type a domain such as <code>jw.ustc.edu.cn</code> and the bookmark is saved in this browser only.</p>
+      <p class="lede">Ten sites, one click. Type a domain such as <code>jw.ustc.edu.cn</code> — everything is saved in this browser only.</p>
     </header>
 
-    <form class="add-form" id="bookmark-form" novalidate>
-      <label class="visually-hidden" for="bookmark-url">Website URL</label>
-      <input id="bookmark-url" name="url" type="text" inputmode="url" autocomplete="off" placeholder="jw.ustc.edu.cn" spellcheck="false">
-      <button class="btn btn-primary" type="submit">Add bookmark</button>
-      <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
-    </form>
+    <div class="wrap">
+      <form class="add-bar" id="bookmark-form" novalidate>
+        <label class="visually-hidden" for="bookmark-url">Website address</label>
+        <input id="bookmark-url" name="url" type="text" inputmode="url" autocomplete="off" placeholder="jw.ustc.edu.cn" spellcheck="false">
+        <button type="submit">Add <span aria-hidden="true">→</span></button>
+        <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
+      </form>
 
-    <div class="toolbar">
-      <button class="btn btn-ghost btn-small" id="toggle-delete-mode" type="button" aria-pressed="false">Delete mode</button>
-      <p class="counter" id="counter" aria-live="polite">0 / 10</p>
-    </div>
+      <div class="collection-bar">
+        <button class="text-button" id="toggle-delete-mode" type="button" aria-pressed="false">Delete mode</button>
+        <span class="counter" id="counter">0 / 10</span>
+      </div>
 
-    <ul class="bookmark-grid" id="bookmark-grid" role="list"></ul>
+      <ul class="bookmark-grid" id="bookmark-grid" role="list"></ul>
 
-    <div class="empty-state" id="empty-state">
-      <p class="empty-title">No bookmarks yet</p>
-      <p>Add the first one above. A good starting set: the academic portal, webmail and Blackboard.</p>
+      <div class="empty" id="empty-state">
+        <h2>Nothing here yet.</h2>
+        <p>Add the academic portal, webmail or Blackboard — the three you open before your first coffee.</p>
+      </div>
     </div>
   </main>
+
+  <footer class="footer wrap">
+    <p>© 2024 WD Team · University of Science and Technology of China</p>
+    <p>Code MIT · Docs CC BY 4.0</p>
+  </footer>
 
   <script src="assets/js/bookmarks.js" defer></script>
 </body>

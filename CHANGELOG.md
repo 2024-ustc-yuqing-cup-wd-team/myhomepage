@@ -4,6 +4,34 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] — 2026-11-07
+
+Editorial redesign of the site; product behaviour is unchanged.
+
+### Added
+
+- Self-hosted **Instrument Serif** and **Inter** WOFF2 fonts with their SIL OFL
+  licences, so the typography also works offline.
+- Automatic light and dark themes driven by `prefers-color-scheme`.
+- A layered "print" hero composition, an SVG calendar illustration and a
+  redesigned banner and social card.
+
+### Changed
+
+- Rebuilt the visual system: warm paper palette, one terracotta accent, hairline
+  rules and an editorial type scale.
+- Replaced the fixed resume-style sidebar with a slim sticky top bar.
+- Reframed the home page around the product (tools, principles, colophon);
+  developer instructions remain in the README and `docs/`.
+- Re-themed bookmark tiles, the calendar and the event dialog.
+- Bookmark monograms now use six muted tones with dark-mode variants.
+
+### Fixed
+
+- Navigation no longer collides on narrow screens; layouts are checked from
+  320 px to 1440 px.
+- Short pages keep the footer at the bottom of the viewport.
+
 ## [1.0.0] — 2026-11-07
 
 Post-competition cleanup of the 2024 USTC Yuqing Cup entry.
@@ -50,4 +78,5 @@ Post-competition cleanup of the 2024 USTC Yuqing Cup entry.
   copies of the submission documents.
 - The `YQC_Website` git submodule pointer.
 
+[1.1.0]: https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/releases/tag/v1.1.0
 [1.0.0]: https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/releases/tag/v1.0.0

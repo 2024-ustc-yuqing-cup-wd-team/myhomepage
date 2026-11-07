@@ -4,133 +4,192 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>USTC MyHomePage · WD Team</title>
-  <meta name="description" content="A lightweight start page for USTC students — campus bookmarks and a personal calendar, built by WD Team for the 2024 Yuqing Cup.">
-  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="The campus sites you open every day and the week ahead, on one quiet page. A 2024 USTC Yuqing Cup entry by WD Team.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f6f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:title" content="USTC MyHomePage">
-  <meta property="og:description" content="Campus bookmarks and a personal calendar, in one lightweight start page. 2024 Yuqing Cup · WD Team.">
+  <meta property="og:description" content="Campus bookmarks and a personal calendar, on one quiet page. 2024 Yuqing Cup · WD Team.">
   <meta property="og:image" content="https://2024-ustc-yuqing-cup-wd-team.github.io/myhomepage/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/instrument-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/base.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <aside class="sidebar">
-    <a class="brand" href="index.html">
-      <img src="assets/img/logo-25.webp" alt="" width="96" height="96">
-      <span class="brand-text"><strong>WD Team</strong><small>Yuqing Cup 2024</small></span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="bookmarks.html">Bookmarks</a>
-      <a href="calendar.html">Calendar</a>
-      <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-    </nav>
-    <p class="sidebar-note">USTC MyHomePage<br><span>2024 · Honorable Mention</span></p>
-  </aside>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="wordmark" href="index.html">
+        <img src="assets/img/logo-25.webp" alt="" width="32" height="32">
+        <span>
+          <strong>WD Team</strong>
+          <small>USTC MyHomePage</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="page" id="main">
-    <section class="hero">
-      <div class="hero-copy">
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero__copy">
         <p class="eyebrow">2024 Yuqing Cup · USTC · Team 25</p>
-        <h1>USTC MyHomePage</h1>
-        <p class="hero-zh">科大个人主页</p>
-        <p class="hero-lead">A lightweight start page for USTC students: one click to the campus systems you use every day, and a calendar that keeps your week in view. Everything runs in your browser.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="bookmarks.html">Open bookmarks</a>
-          <a class="btn btn-ghost" href="calendar.html">Open calendar</a>
-          <a class="btn btn-quiet" href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+        <h1>USTC <em>MyHomePage</em></h1>
+        <p class="hero__zh">科大个人主页</p>
+        <p class="hero__lede">The campus sites you open every day and the week ahead, on one quiet page. No account, no database — everything stays in your browser.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="bookmarks.html">Open bookmarks <span aria-hidden="true">→</span></a>
+          <a class="button button--ghost" href="calendar.html">Open calendar</a>
+        </div>
+        <p class="hero__note">A 2024 Yuqing Cup entry, still running — on GitHub Pages and on an Orange Pi.</p>
+      </div>
+
+      <figure class="print">
+        <div class="print__sheet print__sheet--back" aria-hidden="true"></div>
+        <div class="print__sheet">
+          <img src="assets/img/logo-25.webp" alt="Team 25 monogram" width="512" height="512">
+          <figcaption class="print__caption">
+            <span>Twenty-five</span>
+            <span>Honorable mention · 2024</span>
+          </figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <div class="wrap">
+      <div class="creed">
+        <p>
+          <span>Two tools</span><i aria-hidden="true">·</i>
+          <span>One page</span><i aria-hidden="true">·</i>
+          <span>Zero accounts</span><i aria-hidden="true">·</i>
+          <span>Fully local</span>
+        </p>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="tools-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">The tools</p>
+          <h2 id="tools-title">Two small things, done carefully.</h2>
+          <p>Bookmarks for the ten tabs you reopen every day; a calendar for the week you keep rewriting. Both live entirely in your browser.</p>
+        </div>
+
+        <div class="tools">
+          <article class="tool">
+            <div class="tool__preview" aria-hidden="true">
+              <div class="marks">
+                <span class="mark" data-tone="0">J</span>
+                <span class="mark" data-tone="1">M</span>
+                <span class="mark" data-tone="2">B</span>
+                <span class="mark" data-tone="3">L</span>
+                <span class="mark" data-tone="4">G</span>
+              </div>
+            </div>
+            <div class="tool__body">
+              <h3>Bookmarks</h3>
+              <p>Pin up to ten campus sites — the academic portal, webmail, Blackboard, <span class="nowrap">瀚海</span> — and open any of them in one click. Each bookmark gets a quiet monogram instead of a third-party favicon.</p>
+              <a class="link-arrow" href="bookmarks.html">Open bookmarks <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="tool">
+            <div class="tool__preview" aria-hidden="true">
+              <svg class="mini-cal" viewBox="0 0 256 140" role="presentation">
+                <rect x="0.5" y="0.5" width="255" height="139" rx="5" fill="none" stroke="currentColor" stroke-opacity="0.18"/>
+                <line x1="0.5" y1="28.5" x2="255.5" y2="28.5" stroke="currentColor" stroke-opacity="0.18"/>
+                <circle cx="12" cy="14" r="2.4" fill="var(--accent)"/>
+                <circle cx="20" cy="14" r="2.4" fill="var(--accent)" opacity="0.35"/>
+                <text x="30" y="18.5" font-size="8" letter-spacing="2.4" fill="currentColor" opacity="0.55">NOVEMBER</text>
+                <g stroke="currentColor" stroke-opacity="0.12">
+                  <line x1="36.6" y1="28.5" x2="36.6" y2="139"/>
+                  <line x1="73.1" y1="28.5" x2="73.1" y2="139"/>
+                  <line x1="109.7" y1="28.5" x2="109.7" y2="139"/>
+                  <line x1="146.3" y1="28.5" x2="146.3" y2="139"/>
+                  <line x1="182.9" y1="28.5" x2="182.9" y2="139"/>
+                  <line x1="219.4" y1="28.5" x2="219.4" y2="139"/>
+                </g>
+                <g stroke="currentColor" stroke-opacity="0.1">
+                  <line x1="0.5" y1="56.5" x2="255.5" y2="56.5"/>
+                  <line x1="0.5" y1="84.5" x2="255.5" y2="84.5"/>
+                  <line x1="0.5" y1="112.5" x2="255.5" y2="112.5"/>
+                </g>
+                <rect x="6" y="36" width="18" height="4" rx="2" fill="var(--accent)"/>
+                <rect x="6" y="44" width="12" height="4" rx="2" fill="var(--accent)" opacity="0.35"/>
+                <rect x="150" y="92" width="22" height="4" rx="2" fill="var(--accent)" opacity="0.7"/>
+                <circle cx="128" cy="70" r="11" fill="var(--accent)" opacity="0.12"/>
+                <text x="128" y="73.5" text-anchor="middle" font-size="9" fill="var(--accent)">7</text>
+              </svg>
+            </div>
+            <div class="tool__body">
+              <h3>Calendar</h3>
+              <p>Month, week and day views, click-to-create events, and edits that survive a refresh. Powered by FullCalendar, saved locally, and nothing to sign up for.</p>
+              <a class="link-arrow" href="calendar.html">Open calendar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="hero-visual">
-        <img class="hero-logo" src="assets/img/logo-25.webp" alt="Team 25 monogram" width="512" height="512">
-        <div class="hero-badges">
-          <span class="chip chip-accent">Honorable Mention</span>
-          <span class="chip">2nd Yuqing Cup</span>
+    </section>
+
+    <section class="section" aria-labelledby="principles-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow">Principles</p>
+          <h2 id="principles-title">Quiet software, by design.</h2>
         </div>
-        <dl class="stats">
-          <div><dt>Tools</dt><dd>2</dd></div>
-          <div><dt>Backend</dt><dd>0</dd></div>
-          <div><dt>Data</dt><dd>Local</dd></div>
-        </dl>
+        <ol class="principles">
+          <li class="principle">
+            <span class="principle__num">01</span>
+            <h3>Local by default</h3>
+            <p>Bookmarks and events live in localStorage. There is no database, no sync, and nothing to export before you close the tab.</p>
+          </li>
+          <li class="principle">
+            <span class="principle__num">02</span>
+            <h3>No accounts</h3>
+            <p>No sign-in, no tracking pixels, no analytics. The page makes zero third-party requests while it runs.</p>
+          </li>
+          <li class="principle">
+            <span class="principle__num">03</span>
+            <h3>Runs offline</h3>
+            <p>Fonts, icons and the calendar are served from this repository, so it still works on a LAN with no internet.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="features-title">
-      <p class="eyebrow">What's inside</p>
-      <h2 id="features-title">Two tools, one start page</h2>
-      <p class="sub">No account, no database, no tracking. Your links and events never leave your browser.</p>
-      <div class="cards">
-        <article class="card">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1Z"/></svg>
-          </span>
-          <h3>Bookmarks</h3>
-          <p>Pin the campus systems you open every day — the academic portal, webmail, Blackboard, 瀚海 — and reach any of them in one click. Each bookmark gets a colour-coded monogram, and the list is capped at ten to stay tidy.</p>
-          <a class="card-link" href="bookmarks.html">Open bookmarks <span aria-hidden="true">→</span></a>
-        </article>
-        <article class="card">
-          <span class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
-          </span>
-          <h3>Calendar</h3>
-          <p>Month, week and day views, click-to-create events, and edits that survive a refresh. Powered by FullCalendar and persisted in localStorage, so there is nothing to sign up for.</p>
-          <a class="card-link" href="calendar.html">Open calendar <span aria-hidden="true">→</span></a>
-        </article>
+    <section class="section" aria-labelledby="colophon-title">
+      <div class="wrap">
+        <div class="colophon">
+          <div>
+            <p class="eyebrow" id="colophon-title">Colophon</p>
+            <p>Hand-written HTML, CSS and JavaScript. Typeset in Instrument Serif and Inter, both self-hosted. The calendar is FullCalendar. The site is published from this repository with GitHub Pages; the original deployment ran on an Orange Pi behind Nginx.</p>
+          </div>
+          <ul class="colophon__links">
+            <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage">Source code</a></li>
+            <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/orangepi-server">Deployment notes</a></li>
+            <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/requirements.md">Requirements</a></li>
+            <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/design.md">Design overview</a></li>
+            <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/LICENSE">MIT license</a></li>
+            <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/LICENSE-docs">CC BY 4.0</a></li>
+          </ul>
+        </div>
       </div>
     </section>
-
-    <section class="section" aria-labelledby="architecture-title">
-      <p class="eyebrow">Architecture</p>
-      <h2 id="architecture-title">Static first, self-hosted when you want</h2>
-      <p class="sub">The site is plain HTML, CSS and JavaScript, so it can live on GitHub Pages or on an Orange Pi behind Nginx. An optional Express service provides a health endpoint and a home for future APIs.</p>
-      <ol class="flow">
-        <li class="flow-node"><strong>Browser</strong><small>HTML · CSS · vanilla JS</small></li>
-        <li class="flow-arrow" aria-hidden="true">→</li>
-        <li class="flow-node"><strong>Nginx</strong><small>Static files · <code>/api</code> proxy</small></li>
-        <li class="flow-arrow" aria-hidden="true">→</li>
-        <li class="flow-node"><strong>Express API</strong><small>Optional · <code>/api/health</code></small></li>
-      </ol>
-      <h3 class="minor-title">Built with</h3>
-      <ul class="chips">
-        <li class="chip">Vanilla JavaScript</li>
-        <li class="chip">FullCalendar 6</li>
-        <li class="chip">Nginx</li>
-        <li class="chip">Express (optional)</li>
-        <li class="chip">Orange Pi · ARM64</li>
-        <li class="chip">GitHub Pages</li>
-      </ul>
-    </section>
-
-    <section class="section" aria-labelledby="quickstart-title">
-      <p class="eyebrow">Quick start</p>
-      <h2 id="quickstart-title">No build step</h2>
-      <p class="sub">Clone the repository and serve the folder with any static file server.</p>
-      <pre class="code"><code>git clone https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage.git
-cd myhomepage
-python3 -m http.server 8000
-# open http://localhost:8000</code></pre>
-      <p class="note">Deploying on an Orange Pi instead? The <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/orangepi-server">orangepi-server</a> repository has the Nginx configuration, systemd unit and a one-shot bootstrap script.</p>
-    </section>
-
-    <section class="section" aria-labelledby="docs-title">
-      <p class="eyebrow">Documentation</p>
-      <h2 id="docs-title">From the competition to the repository</h2>
-      <p class="sub">The original submission documents are archived as PDFs; the markdown versions are easier to read and keep the design rationale next to the code.</p>
-      <ul class="links">
-        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/requirements.md"><span>Requirements analysis</span><small>Markdown</small></a></li>
-        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/design.md"><span>Design overview</span><small>Markdown</small></a></li>
-        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/archive/requirements-original.pdf"><span>Requirements analysis</span><small>PDF original</small></a></li>
-        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/archive/design-original.pdf"><span>Design overview</span><small>PDF original</small></a></li>
-      </ul>
-    </section>
-
-    <footer class="footer">
-      <p>© 2024 WD Team · University of Science and Technology of China</p>
-      <p>Code <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/LICENSE">MIT</a> · Docs <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/LICENSE-docs">CC BY 4.0</a></p>
-    </footer>
   </main>
+
+  <footer class="footer wrap">
+    <p>© 2024 WD Team · University of Science and Technology of China</p>
+    <p>Code MIT · Docs CC BY 4.0</p>
+  </footer>
 </body>
 </html>

@@ -32,11 +32,17 @@ Bookmarks and events are kept in `localStorage`, and the site makes **zero
 third-party requests** at runtime — which also means it works on an offline
 campus LAN.
 
-| Home | Bookmarks |
-| --- | --- |
-| <img src="assets/img/screenshot-home.webp" alt="Home page" width="100%"> | <img src="assets/img/screenshot-bookmarks.webp" alt="Bookmarks page" width="100%"> |
+The interface is deliberately quiet: an editorial layout set in self-hosted
+**Instrument Serif** and **Inter**, warm paper tones, one terracotta accent, and
+a light or dark theme that follows the system preference.
 
-<img src="assets/img/screenshot-calendar.webp" alt="Calendar page" width="100%">
+| Home — light | Home — dark |
+| --- | --- |
+| <img src="assets/img/screenshot-home.webp" alt="Home page, light theme" width="100%"> | <img src="assets/img/screenshot-home-dark.webp" alt="Home page, dark theme" width="100%"> |
+
+| Bookmarks | Calendar |
+| --- | --- |
+| <img src="assets/img/screenshot-bookmarks.webp" alt="Bookmarks page" width="100%"> | <img src="assets/img/screenshot-calendar.webp" alt="Calendar page" width="100%"> |
 
 ## Features
 
@@ -49,6 +55,10 @@ campus LAN.
   files.
 - **Optional API** — a tiny Express service with `GET /api/health` is available
   in the deployment repository for the Orange Pi setup.
+- **Light and dark** — the palette follows `prefers-color-scheme`; no toggle or
+  flash of the wrong theme.
+- **Self-hosted type** — Instrument Serif and Inter ship as WOFF2 files with
+  their OFL licences, so the typography also works offline.
 - **Accessible by default** — semantic landmarks, visible focus states, a skip
   link, keyboard-operable dialogs and `prefers-reduced-motion` support.
 
@@ -57,6 +67,7 @@ campus LAN.
 | Layer | Choice |
 | --- | --- |
 | Markup / styling | HTML5, hand-written CSS (no framework) |
+| Typography | Instrument Serif + Inter (self-hosted, SIL OFL) |
 | Behaviour | Vanilla JavaScript (ES2017, no bundler) |
 | Calendar | [FullCalendar 6](https://fullcalendar.io/) (vendored, MIT) |
 | Hosting | GitHub Pages, or Nginx on an Orange Pi |
@@ -75,6 +86,7 @@ myhomepage/
 │   ├── css/              # base.css, bookmarks.css, calendar.css
 │   ├── js/               # bookmarks.js, calendar.js
 │   ├── img/              # logo, favicon, banner, screenshots
+│   ├── fonts/            # Instrument Serif + Inter (WOFF2, OFL)
 │   └── vendor/fullcalendar/
 ├── docs/
 │   ├── requirements.md   # 2024 requirements analysis
@@ -156,6 +168,9 @@ Mention**.
 
 - [FullCalendar](https://fullcalendar.io/) — MIT licensed, vendored in
   `assets/vendor/fullcalendar/`.
+- [Instrument Serif](https://fonts.google.com/specimen/Instrument+Serif) and
+  [Inter](https://fonts.google.com/specimen/Inter) — SIL Open Font License 1.1,
+  self-hosted in `assets/fonts/` with their licence files.
 - The USTC Yuqing Cup organisers and the 2024 judges.
 - Everyone who used the LAN deployment during the competition.
 

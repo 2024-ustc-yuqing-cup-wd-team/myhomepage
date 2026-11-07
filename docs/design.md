@@ -96,6 +96,9 @@ removed the issues that made the original repository hard to read.
 | Area | 2024 submission | Current |
 | --- | --- | --- |
 | UI stack | Bootstrap 4 + jQuery + Semantic UI | Plain CSS, no framework |
+| Navigation | Fixed sidebar (resume-style template) | Editorial top bar with a single page grid |
+| Typography | System fonts | Self-hosted Instrument Serif + Inter (SIL OFL) |
+| Theme | Light only | Light and dark, following `prefers-color-scheme` |
 | Page structure | One page with `<iframe>` embeds | Three real pages (`index`, `bookmarks`, `calendar`) |
 | Storage | Cookies, hand-parsed | `localStorage`, versioned keys |
 | Bookmark icons | Clearbit / Google favicon services | Local colour-coded monograms |
@@ -129,8 +132,26 @@ myhomepage/
 │   ├── css/              # base, bookmarks, calendar
 │   ├── js/               # bookmarks.js, calendar.js
 │   ├── img/              # logo, favicon, screenshots, social card
+│   ├── fonts/            # Instrument Serif + Inter (WOFF2, OFL)
 │   └── vendor/fullcalendar/
 ├── docs/                 # requirements, design, archived PDFs
 ├── scripts/check.mjs     # dependency-free repository checks
 └── .github/              # issue templates and CI
 ```
+
+### 8.4 Visual design
+
+The interface is built on a small token set in `assets/css/base.css`:
+
+- warm paper (`#f6f1e8`), near-black ink, hairline rules and a single terracotta
+  accent, with dark-mode values for every token;
+- display type in **Instrument Serif** and UI type in **Inter**, both self-hosted
+  as WOFF2 files so the page keeps working offline;
+- an editorial rhythm — eyebrow labels, serif section headings, generous
+  whitespace — instead of the card-heavy resume template used in 2024;
+- theme selection through `prefers-color-scheme` only, so there is no toggle,
+  no stored preference and no flash of the wrong theme.
+
+The bookmark tiles derive a stable tone (six muted pairs) from the domain hash;
+the calendar is re-themed through FullCalendar's CSS custom properties.
+
