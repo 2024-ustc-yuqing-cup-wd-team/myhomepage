@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar · USTC MyHomePage</title>
+  <meta name="description" content="Plan your week in month, week or day view. Events are stored in your browser.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calendar · USTC MyHomePage">
+  <meta property="og:description" content="Plan your week in month, week or day view.">
+  <meta property="og:image" content="https://2024-ustc-yuqing-cup-wd-team.github.io/myhomepage/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/calendar.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo-25.webp" alt="" width="96" height="96">
+      <span class="brand-text"><strong>WD Team</strong><small>Yuqing Cup 2024</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="bookmarks.html">Bookmarks</a>
+      <a href="calendar.html" aria-current="page">Calendar</a>
+      <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <p class="sidebar-note">USTC MyHomePage<br><span>2024 · Honorable Mention</span></p>
+  </aside>
+
+  <main class="page" id="main">
+    <header class="page-header">
+      <p class="eyebrow">Tool 02</p>
+      <h1>Calendar</h1>
+      <p class="page-lead">Plan your week in month, week or day view. Events are saved in this browser, so they survive a refresh and stay private.</p>
+    </header>
+
+    <section class="calendar-shell" aria-label="Calendar">
+      <div class="calendar-toolbar">
+        <div class="view-switch" role="group" aria-label="Calendar view">
+          <button type="button" data-view="dayGridMonth" aria-pressed="true">Month</button>
+          <button type="button" data-view="timeGridWeek" aria-pressed="false">Week</button>
+          <button type="button" data-view="timeGridDay" aria-pressed="false">Day</button>
+        </div>
+        <p class="hint">Click a date or drag across days to add an event · click an event to edit or delete it.</p>
+      </div>
+      <div id="calendar"></div>
+    </section>
+
+    <dialog id="event-dialog" aria-labelledby="dialog-title">
+      <form id="event-form" class="dialog-card" method="dialog">
+        <h2 id="dialog-title">New event</h2>
+        <p class="dialog-when" id="event-when"></p>
+        <label class="field" for="event-title">Title
+          <input id="event-title" name="title" type="text" maxlength="80" required autocomplete="off" placeholder="e.g. Linear algebra review">
+        </label>
+        <div class="dialog-actions">
+          <button class="btn btn-primary" type="submit" value="save" id="event-save">Save</button>
+          <button class="btn btn-danger" type="submit" value="delete" id="event-delete" hidden>Delete</button>
+          <button class="btn btn-ghost" type="submit" value="cancel" formnovalidate id="event-cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+  </main>
+
+  <script src="assets/vendor/fullcalendar/index.global.min.js" defer></script>
+  <script src="assets/js/calendar.js" defer></script>
+</body>
+</html>

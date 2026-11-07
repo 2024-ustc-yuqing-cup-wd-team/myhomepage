@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live demo
+    url: https://2024-ustc-yuqing-cup-wd-team.github.io/myhomepage/
+    about: Try the deployed site before filing an issue.
+  - name: Deployment repository
+    url: https://github.com/2024-ustc-yuqing-cup-wd-team/orangepi-server
+    about: Nginx, systemd and the Orange Pi setup live in a separate repository.

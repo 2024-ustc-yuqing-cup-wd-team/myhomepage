@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a problem with the site or the documentation.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. This repository is an archive of a 2024 competition
+        entry, so fixes are best-effort — but a clear reproduction helps a lot.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the problem.
+      placeholder: On the calendar page, ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open https://.../calendar.html
+        2. Click on a day
+        3. ...
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and OS
+      placeholder: Firefox 132 on Windows 11
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: I understand this is an archived project and fixes are best-effort.
+          required: true

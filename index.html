@@ -1,94 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USTC MyHomePage · WD Team</title>
+  <meta name="description" content="A lightweight start page for USTC students — campus bookmarks and a personal calendar, built by WD Team for the 2024 Yuqing Cup.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="USTC MyHomePage">
+  <meta property="og:description" content="Campus bookmarks and a personal calendar, in one lightweight start page. 2024 Yuqing Cup · WD Team.">
+  <meta property="og:image" content="https://2024-ustc-yuqing-cup-wd-team.github.io/myhomepage/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="The index of Team25's homepage." />
-        <meta name="author" content="YuqingClubTeam25" />
-        <title>Team25'homepage</title>
-        <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-        crossorigin="anonymous" />
-  
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"
-      ></script>
-  
-  
-      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-      <link href="styles/index.css" rel="stylesheet" />
-        
-    </head>
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo-25.webp" alt="" width="96" height="96">
+      <span class="brand-text"><strong>WD Team</strong><small>Yuqing Cup 2024</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="bookmarks.html">Bookmarks</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+    <p class="sidebar-note">USTC MyHomePage<br><span>2024 · Honorable Mention</span></p>
+  </aside>
 
-    <body id="page-top">
-          
-        <!-- Navigation--> 
-       
-        <nav class="navbar-expand-lg navbar-dark  fixed-top " id="sideNav" style="background-color: #000000;">
-            <a class="navbar-brand " href="#page-top">
-              <img class="img-profile  mx-auto mb-2" style="border-radius: 15%;" src="images/25.png" alt="profile" /></span>
-            </a>
-            
-            <div class="navbar-collapse" id="navbarResponsive">
-                
-                <ul class="navbar-nav"> <h4 style="color: white;">YQC_Team25</h4>
-                    <li class="nav-item"><a class="nav-link " href="#about">About Us</a>
-                  
-                    <li class="nav-item"><a class="nav-link" href="#bookmarks">Bookmarks</a></li>
-                    <li class="nav-item"><a class="nav-link " href="#todo">To-do</a></li>
-                    
-                </ul>
-            </div>
-        </nav>
+  <main class="page" id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">2024 Yuqing Cup · USTC · Team 25</p>
+        <h1>USTC MyHomePage</h1>
+        <p class="hero-zh">科大个人主页</p>
+        <p class="hero-lead">A lightweight start page for USTC students: one click to the campus systems you use every day, and a calendar that keeps your week in view. Everything runs in your browser.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="bookmarks.html">Open bookmarks</a>
+          <a class="btn btn-ghost" href="calendar.html">Open calendar</a>
+          <a class="btn btn-quiet" href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage" rel="noopener">Source <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-logo" src="assets/img/logo-25.webp" alt="Team 25 monogram" width="512" height="512">
+        <div class="hero-badges">
+          <span class="chip chip-accent">Honorable Mention</span>
+          <span class="chip">2nd Yuqing Cup</span>
+        </div>
+        <dl class="stats">
+          <div><dt>Tools</dt><dd>2</dd></div>
+          <div><dt>Backend</dt><dd>0</dd></div>
+          <div><dt>Data</dt><dd>Local</dd></div>
+        </dl>
+      </div>
+    </section>
 
-    
-        <!-- Page Content -->
-        
-          <!-- About -->
-          <section class="resume-section" id="about">
-                <div class="resume-section-content" style="font-family: sans-serif;">
-                    <h1 class="mb-0 text-secondary" >Yuqing_Cup_Team25</h1>
-                    <br>
-                    <div class="subheading mb-5">
-                        <a class="text-lowercase" style="color: #013d52;" href="https://github.com/YuqingCupTeam25">https://github.com/YuqingCupTeam25</a>
-                    </div>
-                    <h3 class="mb-0">About Us</h3>
-                    <p class="lead mb-5">We are Team25 in 2024Yu-Qing Cup!</p>
-                    </p>
-                </div>
-            </section>
-            <hr class="m-0" />
+    <section class="section" aria-labelledby="features-title">
+      <p class="eyebrow">What's inside</p>
+      <h2 id="features-title">Two tools, one start page</h2>
+      <p class="sub">No account, no database, no tracking. Your links and events never leave your browser.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1Z"/></svg>
+          </span>
+          <h3>Bookmarks</h3>
+          <p>Pin the campus systems you open every day — the academic portal, webmail, Blackboard, 瀚海 — and reach any of them in one click. Each bookmark gets a colour-coded monogram, and the list is capped at ten to stay tidy.</p>
+          <a class="card-link" href="bookmarks.html">Open bookmarks <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <h3>Calendar</h3>
+          <p>Month, week and day views, click-to-create events, and edits that survive a refresh. Powered by FullCalendar and persisted in localStorage, so there is nothing to sign up for.</p>
+          <a class="card-link" href="calendar.html">Open calendar <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
 
+    <section class="section" aria-labelledby="architecture-title">
+      <p class="eyebrow">Architecture</p>
+      <h2 id="architecture-title">Static first, self-hosted when you want</h2>
+      <p class="sub">The site is plain HTML, CSS and JavaScript, so it can live on GitHub Pages or on an Orange Pi behind Nginx. An optional Express service provides a health endpoint and a home for future APIs.</p>
+      <ol class="flow">
+        <li class="flow-node"><strong>Browser</strong><small>HTML · CSS · vanilla JS</small></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-node"><strong>Nginx</strong><small>Static files · <code>/api</code> proxy</small></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-node"><strong>Express API</strong><small>Optional · <code>/api/health</code></small></li>
+      </ol>
+      <h3 class="minor-title">Built with</h3>
+      <ul class="chips">
+        <li class="chip">Vanilla JavaScript</li>
+        <li class="chip">FullCalendar 6</li>
+        <li class="chip">Nginx</li>
+        <li class="chip">Express (optional)</li>
+        <li class="chip">Orange Pi · ARM64</li>
+        <li class="chip">GitHub Pages</li>
+      </ul>
+    </section>
 
-          <!-- bookmarks -->
-          <div class="resume-section" id="bookmarks">
-                <div class="resume-section-content" id="hoh">
-                    <h2 class="mb-5" style="padding-left: 60px;">Bookmarks</h2>   
-                    <iframe src="bookmark.html" class="iframe_bookmark" title="Bookmark Manager"></iframe>
-                  
-    
-                <hr class="m-0" />    
-          <!-- To-do list -->
-          <div class="resume-section" id="todo">
-                <div class="resume-section-content">
-                    <h2 class="mb-5" style="padding-left: 60px;">To-do list</h2><br>
-                    <iframe src="fullcalendar-6.1.15\examples\selectable_copy.html" class="iframe_calendar" title="Bookmark Manager"></iframe>
-                    
+    <section class="section" aria-labelledby="quickstart-title">
+      <p class="eyebrow">Quick start</p>
+      <h2 id="quickstart-title">No build step</h2>
+      <p class="sub">Clone the repository and serve the folder with any static file server.</p>
+      <pre class="code"><code>git clone https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage.git
+cd myhomepage
+python3 -m http.server 8000
+# open http://localhost:8000</code></pre>
+      <p class="note">Deploying on an Orange Pi instead? The <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/orangepi-server">orangepi-server</a> repository has the Nginx configuration, systemd unit and a one-shot bootstrap script.</p>
+    </section>
 
-        <!-- Footer-->
-        <div class="header">
-        <footer class=" text-center">
-           
-        <!-- Bootstrap core JS-->
-       
-        <!-- Core theme JS-->
-        <script src="scripts/index.js"></script>
-    </body>
+    <section class="section" aria-labelledby="docs-title">
+      <p class="eyebrow">Documentation</p>
+      <h2 id="docs-title">From the competition to the repository</h2>
+      <p class="sub">The original submission documents are archived as PDFs; the markdown versions are easier to read and keep the design rationale next to the code.</p>
+      <ul class="links">
+        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/requirements.md"><span>Requirements analysis</span><small>Markdown</small></a></li>
+        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/design.md"><span>Design overview</span><small>Markdown</small></a></li>
+        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/archive/requirements-original.pdf"><span>Requirements analysis</span><small>PDF original</small></a></li>
+        <li><a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/docs/archive/design-original.pdf"><span>Design overview</span><small>PDF original</small></a></li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>© 2024 WD Team · University of Science and Technology of China</p>
+      <p>Code <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/LICENSE">MIT</a> · Docs <a href="https://github.com/2024-ustc-yuqing-cup-wd-team/myhomepage/blob/main/LICENSE-docs">CC BY 4.0</a></p>
+    </footer>
+  </main>
+</body>
 </html>

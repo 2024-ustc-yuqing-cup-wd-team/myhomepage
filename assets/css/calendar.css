@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Calendar tool — FullCalendar theme overrides
+   ========================================================================== */
+
+.calendar-shell {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.1rem;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.calendar-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.view-switch {
+  display: inline-flex;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  background: #f8fafc;
+}
+
+.view-switch button {
+  padding: 0.38rem 0.85rem;
+  border: 0;
+  border-radius: 0.45rem;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-switch button[aria-pressed="true"] {
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+}
+
+.calendar-toolbar .hint {
+  margin: 0 0 0 auto;
+}
+
+#calendar {
+  --fc-border-color: #e8edf4;
+  --fc-page-bg-color: #fff;
+  --fc-neutral-bg-color: #f8fafc;
+  --fc-today-bg-color: #fff7ed;
+  --fc-event-bg-color: var(--accent);
+  --fc-event-border-color: var(--accent);
+  --fc-event-text-color: #fff;
+  --fc-button-bg-color: #fff;
+  --fc-button-border-color: var(--line);
+  --fc-button-text-color: #334155;
+  --fc-button-hover-bg-color: #f8fafc;
+  --fc-button-hover-border-color: #cbd5e1;
+  --fc-button-active-bg-color: var(--accent);
+  --fc-button-active-border-color: var(--accent);
+  font-family: var(--font);
+}
+
+.fc .fc-toolbar {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Keep the title optically centred even though the right-hand group is empty. */
+.fc .fc-toolbar-chunk:first-child {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: flex-start;
+}
+
+.fc .fc-toolbar-chunk:nth-child(2) {
+  flex: 0 0 auto;
+}
+
+.fc .fc-toolbar-chunk:last-child {
+  flex: 1 1 0;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+
+.fc .fc-button {
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.55rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: none !important;
+  text-transform: capitalize;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  color: #fff;
+}
+
+.fc .fc-col-header-cell-cushion {
+  padding: 0.45rem 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background: var(--fc-today-bg-color);
+}
+
+.fc .fc-event {
+  border-radius: 0.35rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.fc .fc-scrollgrid {
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.fc .fc-list {
+  border-radius: 0.75rem;
+}
+
+@media (max-width: 40rem) {
+  .calendar-shell {
+    margin-inline: -0.5rem;
+    padding: 0.6rem;
+  }
+
+  .calendar-toolbar .hint {
+    flex-basis: 100%;
+    order: 2;
+    margin: 0;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1rem;
+  }
+
+  .fc .fc-button {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.75rem;
+  }
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+/* Keep "Save" first in the DOM (so Enter submits) but last visually. */
+.dialog-actions #event-delete {
+  order: 1;
+}
+
+.dialog-actions #event-cancel {
+  order: 2;
+}
+
+.dialog-actions #event-save {
+  order: 3;
+}

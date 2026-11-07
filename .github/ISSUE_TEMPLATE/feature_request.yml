@@ -1,0 +1,41 @@
+name: Feature request
+description: Suggest an improvement or a missing piece of documentation.
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This project is an archive of a 2024 competition entry and is not under
+        active development. Documentation fixes, accessibility improvements and
+        small quality-of-life changes are welcome; larger product features are
+        likely out of scope.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the use case, not only the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Keep it compatible with the "static, no build step, no third-party requests" constraint.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
